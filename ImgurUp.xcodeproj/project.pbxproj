@@ -398,6 +398,7 @@
 				421C039C1A05C68B007072EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		421C039D1A05C68B007072EF /* Build configuration list for PBXNativeTarget "ImgurUpTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +407,7 @@
 				421C039F1A05C68B007072EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

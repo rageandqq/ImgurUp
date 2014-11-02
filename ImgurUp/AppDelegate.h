@@ -8,8 +8,19 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
 
+    IBOutlet NSMenu *statusMenu;
+    NSStatusItem *statusItem;
+    
+}
+
+@property (weak) IBOutlet NSWindow *aboutWindow;
+@property (weak) IBOutlet NSWindow *uploadsWindow;
+
+- (IBAction)about:(id)sender;
+- (IBAction)uploads:(id)sender;
+- (IBAction)newUpload:(id)sender;
 
 @end
 
