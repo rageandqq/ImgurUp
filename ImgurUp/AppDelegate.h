@@ -7,11 +7,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <IOKit/IOKitLib.h>
+#import <IOKit/graphics/IOGraphicsLib.h>
+#import "ScreenDocument.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
 
     IBOutlet NSMenu *statusMenu;
     NSStatusItem *statusItem;
+    
+    CGDirectDisplayID *displays;
+    int numDisplays;
+    
+    ScreenDocument *screen;
     
 }
 
@@ -21,6 +29,10 @@
 - (IBAction)about:(id)sender;
 - (IBAction)uploads:(id)sender;
 - (IBAction)newUpload:(id)sender;
+- (IBAction)takeScreenshot:(id)sender;
+
+- (void) getDisplays;
+- (NSString *) displayNameFromId:(CGDirectDisplayID)displayId;
 
 @end
 

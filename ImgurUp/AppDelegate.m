@@ -16,9 +16,18 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [NSApp setActivationPolicy: NSApplicationActivationPolicyAccessory]; //Remove from dock
+    [self initVariables];
+    [self getDisplays];
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification { }
+
+- (void)initVariables {
+    displays = nil;
+    numDisplays = 0;
+    screen = [[ScreenDocument alloc] init];
+}
 
 - (void)awakeFromNib {
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
@@ -37,8 +46,61 @@
 }
 
 - (IBAction)uploads:(id)sender {
+    NSLog(@"All Uploads window opened");
+    [self.uploadsWindow makeKeyAndOrderFront:NSApp];
 }
 
 - (IBAction)newUpload:(id)sender {
+    
+}
+
+- (IBAction)takeScreenshot:(id)sender {
+    if (displays == nil || numDisplays <= 0) {
+        NSLog(@"ERROR: Cannot take screenshot. No displays found");
+        return;
+    }
+    if (numDisplays == 1) {
+        CGImageRef screenCap = CGDisplayCreateImage(displays[0]);
+        [screen setCGImage:screenCap];
+    }
+    else {
+        //multiple displays, not yet implemented.
+    }
+}
+
+- (void)getDisplays {
+    CGError error = CGDisplayNoErr;
+    CGDisplayCount count = 0;
+    
+    error = CGGetActiveDisplayList(0, NULL, &count);
+    
+    if (error != CGDisplayNoErr) {
+        displays = nil;
+        NSLog(@"ERROR: No displays found.");
+    }
+    else {
+        displays = calloc((size_t)count, sizeof(CGDirectDisplayID));
+        error = CGGetActiveDisplayList(count, displays, &count);
+        if (error != CGDisplayNoErr) {
+            displays = nil;
+            NSLog(@"ERROR: Could not get list of active displays.");
+        }
+        else {
+            numDisplays = count;
+            for (int i = 0; i < count; i++) {
+                NSLog(@"Display #%i: %@", (i+1), [self displayNameFromId:displays[i]]);
+            }
+        }
+
+    }
+}
+
+- (NSString *)displayNameFromId:(CGDirectDisplayID)displayId {
+    NSDictionary *info = (__bridge NSDictionary *)IODisplayCreateInfoDictionary(CGDisplayIOServicePort(displayId), kIODisplayOnlyPreferredName);
+    NSDictionary *names = [info objectForKey:[NSString stringWithUTF8String:kDisplayProductName]];
+    if ([names count] > 0) {
+        return [names objectForKey:[[names allKeys] objectAtIndex:0]];
+    }
+    return nil;
 }
 @end

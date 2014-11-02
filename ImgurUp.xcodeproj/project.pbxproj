@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4213DE7A1A068726001F732C /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4213DE791A068726001F732C /* IOKit.framework */; };
+		4213DE7D1A069A9A001F732C /* ScreenDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 4213DE7C1A069A9A001F732C /* ScreenDocument.m */; };
 		421C03841A05C68A007072EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 421C03831A05C68A007072EF /* AppDelegate.m */; };
 		421C03861A05C68A007072EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 421C03851A05C68A007072EF /* main.m */; };
 		421C03881A05C68B007072EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 421C03871A05C68B007072EF /* Images.xcassets */; };
@@ -25,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4213DE791A068726001F732C /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		4213DE7B1A069A9A001F732C /* ScreenDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenDocument.h; sourceTree = "<group>"; };
+		4213DE7C1A069A9A001F732C /* ScreenDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenDocument.m; sourceTree = "<group>"; };
 		421C037D1A05C68A007072EF /* ImgurUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImgurUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		421C03811A05C68A007072EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		421C03821A05C68A007072EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4213DE7A1A068726001F732C /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +64,7 @@
 		421C03741A05C68A007072EF = {
 			isa = PBXGroup;
 			children = (
+				4213DE791A068726001F732C /* IOKit.framework */,
 				421C037F1A05C68A007072EF /* ImgurUp */,
 				421C03931A05C68B007072EF /* ImgurUpTests */,
 				421C037E1A05C68A007072EF /* Products */,
@@ -81,6 +88,8 @@
 				421C03871A05C68B007072EF /* Images.xcassets */,
 				421C03891A05C68B007072EF /* MainMenu.xib */,
 				421C03801A05C68A007072EF /* Supporting Files */,
+				4213DE7B1A069A9A001F732C /* ScreenDocument.h */,
+				4213DE7C1A069A9A001F732C /* ScreenDocument.m */,
 			);
 			path = ImgurUp;
 			sourceTree = "<group>";
@@ -211,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				421C03861A05C68A007072EF /* main.m in Sources */,
+				4213DE7D1A069A9A001F732C /* ScreenDocument.m in Sources */,
 				421C03841A05C68A007072EF /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

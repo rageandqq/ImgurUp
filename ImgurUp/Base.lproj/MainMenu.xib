@@ -14,55 +14,11 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
                 <outlet property="aboutWindow" destination="wuT-9q-eZm" id="zqK-P5-VMI"/>
-                <outlet property="menuItem" destination="1Xt-HY-uBw" id="xmY-EV-Jmi"/>
                 <outlet property="statusMenu" destination="Kry-A3-nsr" id="S9r-oT-onK"/>
-                <outlet property="uploadsMenuItem" destination="tNB-DR-ikT" id="yKI-VF-4gj"/>
                 <outlet property="uploadsWindow" destination="QvC-M9-y7g" id="1d9-QV-aB5"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
-            <items>
-                <menuItem title="ImgurUp" id="1Xt-HY-uBw">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="ImgurUp" systemMenu="apple" id="uQy-DD-JDr">
-                        <items>
-                            <menuItem title="About ImgurUp" id="5kV-Vb-QxS">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                            <menuItem title="Upload File" id="BOF-NM-1cW">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                            </menuItem>
-                            <menuItem title="Uploads" id="tNB-DR-ikT">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                            <menuItem title="Quit ImgurUp" keyEquivalent="q" id="4sb-4s-VLi">
-                                <connections>
-                                    <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
-                                </connections>
-                            </menuItem>
-                        </items>
-                    </menu>
-                </menuItem>
-                <menuItem title="Help" id="wpr-3q-Mcd">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
-                        <items>
-                            <menuItem title="ImgurUp Help" keyEquivalent="?" id="FKE-Sm-Kum">
-                                <connections>
-                                    <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
-                                </connections>
-                            </menuItem>
-                        </items>
-                    </menu>
-                </menuItem>
-            </items>
-        </menu>
         <window title="ImgurUp" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -72,7 +28,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
             </view>
-            <point key="canvasLocation" x="359" y="23"/>
+            <point key="canvasLocation" x="456" y="45"/>
         </window>
         <menu id="Kry-A3-nsr">
             <items>
@@ -95,6 +51,12 @@
                         </items>
                     </menu>
                 </menuItem>
+                <menuItem title="Take Screenshot" id="Bqg-Hd-Qmf">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="takeScreenshot:" target="Voe-Tx-rLC" id="p3z-Rc-KI1"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="About" id="hiY-YN-FSe">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -108,41 +70,36 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="-96.5" y="171.5"/>
+            <point key="canvasLocation" x="-56.5" y="167.5"/>
         </menu>
         <window title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="wuT-9q-eZm">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="584" y="338" width="313" height="242"/>
+            <rect key="contentRect" x="584" y="338" width="309" height="114"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="GgX-aE-6vK">
-                <rect key="frame" x="0.0" y="0.0" width="313" height="242"/>
+                <rect key="frame" x="0.0" y="0.0" width="309" height="114"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kQR-zK-cfA">
-                        <rect key="frame" x="100" y="104" width="113" height="32"/>
-                        <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hdk-5T-EsS">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                            <string key="keyEquivalent" base64-UTF8="YES">
-DQ
-</string>
-                        </buttonCell>
-                        <connections>
-                            <action selector="close:" target="-1" id="xgE-yA-WyP"/>
-                        </connections>
-                    </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xOy-AA-7r7">
-                        <rect key="frame" x="8" y="140" width="296" height="60"/>
+                        <rect key="frame" x="6" y="58" width="296" height="36"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Created by Sameer Chitley" id="Uhp-CM-ZOJ">
                             <font key="font" size="20" name=".HelveticaNeueDeskInterface-Regular"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2F1-T2-uh8">
+                        <rect key="frame" x="82" y="33" width="145" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="github.com/rageandqq" id="dO8-10-hda">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="359.5" y="448"/>
+            <point key="canvasLocation" x="357.5" y="384"/>
         </window>
     </objects>
 </document>
