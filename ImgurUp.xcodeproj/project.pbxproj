@@ -85,11 +85,11 @@
 			children = (
 				421C03821A05C68A007072EF /* AppDelegate.h */,
 				421C03831A05C68A007072EF /* AppDelegate.m */,
+				4213DE7B1A069A9A001F732C /* ScreenDocument.h */,
+				4213DE7C1A069A9A001F732C /* ScreenDocument.m */,
 				421C03871A05C68B007072EF /* Images.xcassets */,
 				421C03891A05C68B007072EF /* MainMenu.xib */,
 				421C03801A05C68A007072EF /* Supporting Files */,
-				4213DE7B1A069A9A001F732C /* ScreenDocument.h */,
-				4213DE7C1A069A9A001F732C /* ScreenDocument.m */,
 			);
 			path = ImgurUp;
 			sourceTree = "<group>";

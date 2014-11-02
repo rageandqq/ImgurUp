@@ -16,5 +16,6 @@
 
 - (void) setCGImage:(CGImageRef)newImage;
 - (CGSize) imageSize;
+- (BOOL) writeToFile:(NSString *)path;
 
 @end

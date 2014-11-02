@@ -10,36 +10,23 @@
 
 @implementation ScreenDocument: NSObject
 
-/* Modified from Apple's ScreenSnapshot
-    https://developer.apple.com/library/mac/samplecode/ScreenSnapshot/Introduction/Intro.html */
-- (BOOL)writeToURL:(NSURL *)absoluteURL ofType:(NSString *)typeName error:(NSError **)outError
-{
-    BOOL status = NO;
-    
-    CFStringRef utiRef = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge CFStringRef) typeName,kUTTypeData);
-    if (utiRef == nil) {
-        return status;
+- (BOOL) writeToFile:(NSString *)path {
+    CFURLRef url = (__bridge CFURLRef)[NSURL fileURLWithPath:path];
+    CGImageDestinationRef destination = CGImageDestinationCreateWithURL(url, kUTTypePNG, 1, NULL);
+    if (!destination) {
+        NSLog(@"Failed to create CGImageDestination for %@", path);
+        return NO;
     }
     
-    CGImageDestinationRef dest = CGImageDestinationCreateWithURL((CFURLRef)absoluteURL, utiRef, 1, nil);
-    CFRelease(utiRef);
+    CGImageDestinationAddImage(destination, [self currentCGImage], nil);
     
-    if (dest == nil) {
-        goto bail;
+    if (!CGImageDestinationFinalize(destination)) {
+        NSLog(@"Failed to write image to %@", path);
     }
     
-    CGImageRef docImage = [self currentCGImage];
-    if (docImage == nil) {
-        goto bail;
-    }
+    CFRelease(destination);
     
-    CGImageDestinationAddImage(dest, docImage, NULL);
-    status = CGImageDestinationFinalize(dest);
-
-bail:
-    if(dest)
-        CFRelease(dest);
-    return status;
+    return YES;
 }
 
 - (void)setCGImage:(CGImageRef)newImage {

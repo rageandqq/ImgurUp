@@ -62,6 +62,14 @@
     if (numDisplays == 1) {
         CGImageRef screenCap = CGDisplayCreateImage(displays[0]);
         [screen setCGImage:screenCap];
+        
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *path = [paths objectAtIndex:0];
+        //path = [path stringByAppendingString:@"/ImgurUp/Uploads/image.jpg"];
+        path = [path stringByAppendingString:@"image.jpg"];
+        if ([screen writeToFile:path]) {
+            NSLog(@"Save Succesful");
+        }
     }
     else {
         //multiple displays, not yet implemented.
