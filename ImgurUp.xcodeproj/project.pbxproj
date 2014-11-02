@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		421C03841A05C68A007072EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 421C03831A05C68A007072EF /* AppDelegate.m */; };
+		421C03861A05C68A007072EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 421C03851A05C68A007072EF /* main.m */; };
+		421C03881A05C68B007072EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 421C03871A05C68B007072EF /* Images.xcassets */; };
+		421C038B1A05C68B007072EF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421C03891A05C68B007072EF /* MainMenu.xib */; };
+		421C03971A05C68B007072EF /* ImgurUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 421C03961A05C68B007072EF /* ImgurUpTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		421C03911A05C68B007072EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 421C03751A05C68A007072EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 421C037C1A05C68A007072EF;
+			remoteInfo = ImgurUp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		421C037D1A05C68A007072EF /* ImgurUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImgurUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		421C03811A05C68A007072EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		421C03821A05C68A007072EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		421C03831A05C68A007072EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		421C03851A05C68A007072EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		421C03871A05C68B007072EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		421C038A1A05C68B007072EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		421C03901A05C68B007072EF /* ImgurUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImgurUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		421C03951A05C68B007072EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		421C03961A05C68B007072EF /* ImgurUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImgurUpTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		421C037A1A05C68A007072EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		421C038D1A05C68B007072EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		421C03741A05C68A007072EF = {
+			isa = PBXGroup;
+			children = (
+				421C037F1A05C68A007072EF /* ImgurUp */,
+				421C03931A05C68B007072EF /* ImgurUpTests */,
+				421C037E1A05C68A007072EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		421C037E1A05C68A007072EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				421C037D1A05C68A007072EF /* ImgurUp.app */,
+				421C03901A05C68B007072EF /* ImgurUpTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		421C037F1A05C68A007072EF /* ImgurUp */ = {
+			isa = PBXGroup;
+			children = (
+				421C03821A05C68A007072EF /* AppDelegate.h */,
+				421C03831A05C68A007072EF /* AppDelegate.m */,
+				421C03871A05C68B007072EF /* Images.xcassets */,
+				421C03891A05C68B007072EF /* MainMenu.xib */,
+				421C03801A05C68A007072EF /* Supporting Files */,
+			);
+			path = ImgurUp;
+			sourceTree = "<group>";
+		};
+		421C03801A05C68A007072EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				421C03811A05C68A007072EF /* Info.plist */,
+				421C03851A05C68A007072EF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		421C03931A05C68B007072EF /* ImgurUpTests */ = {
+			isa = PBXGroup;
+			children = (
+				421C03961A05C68B007072EF /* ImgurUpTests.m */,
+				421C03941A05C68B007072EF /* Supporting Files */,
+			);
+			path = ImgurUpTests;
+			sourceTree = "<group>";
+		};
+		421C03941A05C68B007072EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				421C03951A05C68B007072EF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		421C037C1A05C68A007072EF /* ImgurUp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 421C039A1A05C68B007072EF /* Build configuration list for PBXNativeTarget "ImgurUp" */;
+			buildPhases = (
+				421C03791A05C68A007072EF /* Sources */,
+				421C037A1A05C68A007072EF /* Frameworks */,
+				421C037B1A05C68A007072EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImgurUp;
+			productName = ImgurUp;
+			productReference = 421C037D1A05C68A007072EF /* ImgurUp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		421C038F1A05C68B007072EF /* ImgurUpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 421C039D1A05C68B007072EF /* Build configuration list for PBXNativeTarget "ImgurUpTests" */;
+			buildPhases = (
+				421C038C1A05C68B007072EF /* Sources */,
+				421C038D1A05C68B007072EF /* Frameworks */,
+				421C038E1A05C68B007072EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				421C03921A05C68B007072EF /* PBXTargetDependency */,
+			);
+			name = ImgurUpTests;
+			productName = ImgurUpTests;
+			productReference = 421C03901A05C68B007072EF /* ImgurUpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		421C03751A05C68A007072EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = rageandqq;
+				TargetAttributes = {
+					421C037C1A05C68A007072EF = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					421C038F1A05C68B007072EF = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 421C037C1A05C68A007072EF;
+					};
+				};
+			};
+			buildConfigurationList = 421C03781A05C68A007072EF /* Build configuration list for PBXProject "ImgurUp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 421C03741A05C68A007072EF;
+			productRefGroup = 421C037E1A05C68A007072EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				421C037C1A05C68A007072EF /* ImgurUp */,
+				421C038F1A05C68B007072EF /* ImgurUpTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		421C037B1A05C68A007072EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				421C03881A05C68B007072EF /* Images.xcassets in Resources */,
+				421C038B1A05C68B007072EF /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		421C038E1A05C68B007072EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		421C03791A05C68A007072EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				421C03861A05C68A007072EF /* main.m in Sources */,
+				421C03841A05C68A007072EF /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		421C038C1A05C68B007072EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				421C03971A05C68B007072EF /* ImgurUpTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		421C03921A05C68B007072EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 421C037C1A05C68A007072EF /* ImgurUp */;
+			targetProxy = 421C03911A05C68B007072EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		421C03891A05C68B007072EF /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				421C038A1A05C68B007072EF /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		421C03981A05C68B007072EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		421C03991A05C68B007072EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		421C039B1A05C68B007072EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ImgurUp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		421C039C1A05C68B007072EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ImgurUp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		421C039E1A05C68B007072EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ImgurUpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImgurUp.app/Contents/MacOS/ImgurUp";
+			};
+			name = Debug;
+		};
+		421C039F1A05C68B007072EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ImgurUpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImgurUp.app/Contents/MacOS/ImgurUp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		421C03781A05C68A007072EF /* Build configuration list for PBXProject "ImgurUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				421C03981A05C68B007072EF /* Debug */,
+				421C03991A05C68B007072EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		421C039A1A05C68B007072EF /* Build configuration list for PBXNativeTarget "ImgurUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				421C039B1A05C68B007072EF /* Debug */,
+				421C039C1A05C68B007072EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		421C039D1A05C68B007072EF /* Build configuration list for PBXNativeTarget "ImgurUpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				421C039E1A05C68B007072EF /* Debug */,
+				421C039F1A05C68B007072EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 421C03751A05C68A007072EF /* Project object */;
+}
