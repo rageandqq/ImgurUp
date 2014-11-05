@@ -29,7 +29,7 @@
 - (IBAction)about:(id)sender;
 - (IBAction)uploads:(id)sender;
 - (IBAction)newUpload:(id)sender;
-- (IBAction)takeScreenshot:(id)sender;
+- (IBAction)takeAndSaveScreenshot:(id)sender;
 
 - (void) getDisplays;
 - (NSString *) displayNameFromId:(CGDirectDisplayID)displayId;

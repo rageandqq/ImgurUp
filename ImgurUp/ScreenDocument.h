@@ -9,13 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <IOKit/IOKitLib.h>
 #import <IOKit/graphics/IOGraphicsLib.h>
+#import <AppKit/AppKit.h>
 
 @interface ScreenDocument: NSObject {
     CGImageRef image;
 }
 
 - (void) setCGImage:(CGImageRef)newImage;
-- (CGSize) imageSize;
+//- (CGSize) imageSize;
 - (BOOL) writeToFile:(NSString *)path;
+- (void) uploadImage;
 
 @end

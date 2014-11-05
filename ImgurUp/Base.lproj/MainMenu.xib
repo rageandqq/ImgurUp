@@ -54,7 +54,7 @@
                 <menuItem title="Take Screenshot" id="Bqg-Hd-Qmf">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="takeScreenshot:" target="Voe-Tx-rLC" id="p3z-Rc-KI1"/>
+                        <action selector="takeAndSaveScreenshot:" target="Voe-Tx-rLC" id="rzU-u6-a9S"/>
                     </connections>
                 </menuItem>
                 <menuItem title="About" id="hiY-YN-FSe">
@@ -101,5 +101,8 @@
             </view>
             <point key="canvasLocation" x="357.5" y="384"/>
         </window>
+        <menuItem title="Take Screenshot" id="14d-DN-YcO">
+            <modifierMask key="keyEquivalentModifierMask"/>
+        </menuItem>
     </objects>
 </document>

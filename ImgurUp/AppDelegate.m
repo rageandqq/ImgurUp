@@ -54,7 +54,7 @@
     
 }
 
-- (IBAction)takeScreenshot:(id)sender {
+- (IBAction)takeAndSaveScreenshot:(id)sender {
     if (displays == nil || numDisplays <= 0) {
         NSLog(@"ERROR: Cannot take screenshot. No displays found");
         return;
@@ -65,10 +65,17 @@
         
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *path = [paths objectAtIndex:0];
-        //path = [path stringByAppendingString:@"/ImgurUp/Uploads/image.jpg"];
-        path = [path stringByAppendingString:@"image.jpg"];
+        
+        NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd-hh:mm:ss"];
+        
+        path = [path stringByAppendingString:@"/SreenShot-"];
+        path = [path stringByAppendingString:[dateFormatter stringFromDate:[NSDate date]]];
+        path = [path stringByAppendingString:@".jpg"];
+        
         if ([screen writeToFile:path]) {
-            NSLog(@"Save Succesful");
+            NSLog(@"Save Succesful. Saved at: %@", path);
+            [screen uploadImage];
         }
     }
     else {

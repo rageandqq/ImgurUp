@@ -8,6 +8,7 @@
 
 #import "ScreenDocument.h"
 
+
 @implementation ScreenDocument: NSObject
 
 - (BOOL) writeToFile:(NSString *)path {
@@ -37,12 +38,20 @@
     return image;
 }
 
-- (CGSize)imageSize {
-    if (image) {
-        return CGSizeMake(CGImageGetWidth(image), CGImageGetHeight(image));
-    }
-    return CGSizeMake(0, 0); //no image set, returned 0x0
+- (NSData *) getNSDataFromImage {
+    if (![self currentCGImage])
+        return nil;
+    CGImageRef currentImage = [self currentCGImage];
+    NSSize imageSize = NSZeroSize;
+    imageSize.height = CGImageGetHeight(currentImage);
+    imageSize.width = CGImageGetWidth(currentImage);
+    NSImage *imageAsNSImage = [[NSImage alloc ] initWithCGImage:currentImage size:imageSize];
+    return [imageAsNSImage TIFFRepresentation];
+    
 }
 
+- (void) uploadImage {
+
+}
 
 @end
